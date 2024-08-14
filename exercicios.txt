@@ -1,0 +1,31 @@
+Treino, Exercício, Séries, Repetições, Peso, Observações
+A, Supino Reto, 4, 10, , Maquina
+A, Supino Inclinado, 4, 10, , Maquina
+A, Supino Declinado, 4, 10, , Maquina
+A, Crucifixo, 4, 10, 75, Maquina
+A, Triceps Frances, 4, 10, , Barra v
+A, Triceps Testa, 4, 10, , Barra v
+A, Triceps, 4, 10, , Corda
+B, Cadeira Flexora, 4, 10, 75, Maquina
+B, Mesa Flexora, 4, 10, , Maquina
+B, Flexora em pé, 4, 10, , Unilateral
+B, Extensão Lombar, 4, 15, 0, Coluna reta
+B, Panturrilha de Pé, 4, 10, 0, Caixote
+B, Panturrilha Sentado, 4, 10, 20, Maquina
+C, Pulldown, 6, 10, , Barra Curva
+C, Puxada Alta, 4, 10, 60, Barra Curva
+C, Remada Baixa, 4, 10, 80, Triangulo
+C, Puxada Alta, 4, 10, 60, Supinada
+C, Rosca Scott, 4, 10, 25, Barra w
+C, Rosca, 4, 10, , Corda
+D, Agachamento, 4, 10, , Livre
+D, Leg Press, 4, 10, 240, Maquina
+D, Agachamento, 4, 10, 40, Maquina
+D, Cadeira Extensora, 4, 10, 75, Maquina
+D, Agachamento Búlgaro, 4, 10, , Banco
+D, Elevação Pelvica, 4, 10, , Maquina
+E, Desenvolvimento, 4, 12, , Maquina
+E, Crucifixo Inverso, 4, 12, 45, Maquina
+E, Elevação Lateral, 4, 12, , Maquina
+E, Desenvolvimento, 4, 12, 20, Halteres
+E, Abdominal, 6, 20, , Maquina
