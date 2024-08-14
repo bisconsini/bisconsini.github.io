@@ -1,106 +1,126 @@
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js')
-    .then(() => console.log('Service Worker registrado com sucesso.'))
-    .catch((error) => console.log('Falha ao registrar o Service Worker:', error));
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('exerciseForm');
+    let exercises = JSON.parse(localStorage.getItem('exercises')) || [];
 
-const form = document.getElementById('exerciseForm');
-let exercises = JSON.parse(localStorage.getItem('exercises')) || [];
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-form.addEventListener('submit', function (e) {
-    e.preventDefault();
+        const training = document.getElementById('training').value;
+        const exerciseName = document.getElementById('exerciseName').value;
+        const sets = document.getElementById('sets').value;
+        const reps = document.getElementById('reps').value;
+        const weight = document.getElementById('weight').value || '';
+        const notes = document.getElementById('notes').value || '';
 
-    const training = document.getElementById('training').value;
-    const exerciseName = document.getElementById('exerciseName').value;
-    const sets = document.getElementById('sets').value;
-    const reps = document.getElementById('reps').value;
-    const weight = document.getElementById('weight').value || '';
-    const notes = document.getElementById('notes').value || '';
+        const exercise = {
+            training: training,
+            name: exerciseName,
+            sets: sets,
+            reps: reps,
+            weight: weight,
+            notes: notes
+        };
 
-    exercises.push({ training, exerciseName, sets, reps, weight, notes });
-    localStorage.setItem('exercises', JSON.stringify(exercises));
+        exercises.push(exercise);
+        localStorage.setItem('exercises', JSON.stringify(exercises));
 
-    form.reset();
-    renderTable();
-});
+        addExerciseToTable(exercise, exercises.length - 1);
+        form.reset();
+    });
 
-function renderTable() {
-    const tbody = document.querySelector('#exerciseTable tbody');
-    tbody.innerHTML = '';
+    function addExerciseToTable(exercise, index) {
+        const table = document.getElementById('exerciseTable').getElementsByTagName('tbody')[0];
+        const newRow = table.insertRow();
 
-    exercises.forEach((exercise, index) => {
-        const tr = document.createElement('tr');
-
-        tr.innerHTML = `
+        newRow.innerHTML = `
             <td>${exercise.training}</td>
-            <td>${exercise.exerciseName}</td>
+            <td>${exercise.name}</td>
             <td>${exercise.sets}</td>
             <td>${exercise.reps}</td>
             <td>${exercise.weight}</td>
             <td>${exercise.notes}</td>
-            <td>
-                <div class="action-buttons">
-                    <button onclick="editExercise(${index})">Editar</button>
-                    <button class="delete" onclick="deleteExercise(${index})">Apagar</button>
-                </div>
+            <td class="action-buttons">
+                <button onclick="editExercise(${index})">Editar</button>
+                <button class="delete" onclick="deleteExercise(${index})">Apagar</button>
             </td>
         `;
+    }
 
-        tbody.appendChild(tr);
-    });
-}
+    function editExercise(index) {
+        const exercise = exercises[index];
+        document.getElementById('training').value = exercise.training;
+        document.getElementById('exerciseName').value = exercise.name;
+        document.getElementById('sets').value = exercise.sets;
+        document.getElementById('reps').value = exercise.reps;
+        document.getElementById('weight').value = exercise.weight;
+        document.getElementById('notes').value = exercise.notes;
 
-function editExercise(index) {
-    const exercise = exercises[index];
+        deleteExercise(index);
+    }
 
-    document.getElementById('training').value = exercise.training;
-    document.getElementById('exerciseName').value = exercise.exerciseName;
-    document.getElementById('sets').value = exercise.sets;
-    document.getElementById('reps').value = exercise.reps;
-    document.getElementById('weight').value = exercise.weight;
-    document.getElementById('notes').value = exercise.notes;
+    function deleteExercise(index) {
+        exercises.splice(index, 1);
+        localStorage.setItem('exercises', JSON.stringify(exercises));
+        loadExercises();
+    }
 
-    exercises.splice(index, 1);
-    localStorage.setItem('exercises', JSON.stringify(exercises));
-    renderTable();
-}
+    function loadExercises() {
+        const table = document.getElementById('exerciseTable').getElementsByTagName('tbody')[0];
+        table.innerHTML = '';
+        exercises.forEach((exercise, i) => addExerciseToTable(exercise, i));
+    }
 
-function deleteExercise(index) {
-    exercises.splice(index, 1);
-    localStorage.setItem('exercises', JSON.stringify(exercises));
-    renderTable();
-}
+    function exportToFile() {
+        let content = 'Treino, Exercício, Séries, Repetições, Peso, Observações\n';
+        exercises.forEach(exercise => {
+            content += `${exercise.training}, ${exercise.name}, ${exercise.sets}, ${exercise.reps}, ${exercise.weight}, ${exercise.notes}\n`;
+        });
 
-function importFromFile() {
-    const fileInput = document.getElementById('importFile');
-    const file = fileInput.files[0];
-    const reader = new FileReader();
+        const blob = new Blob([content], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'exercicios.txt';
+        a.click();
+        URL.revokeObjectURL(url);
+    }
 
-    reader.onload = function (e) {
-        try {
-            exercises = JSON.parse(e.target.result);
-            localStorage.setItem('exercises', JSON.stringify(exercises));
-            renderTable();
-        } catch (error) {
-            alert('Erro ao importar arquivo.');
+    function importFromFile() {
+        const fileInput = document.getElementById('importFile');
+        const file = fileInput.files[0];
+
+        if (!file) {
+            alert('Por favor, selecione um arquivo para importar.');
+            return;
         }
-    };
 
-    reader.readAsText(file);
-}
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const text = e.target.result;
+            const lines = text.split('\n');
+            exercises = [];
+            lines.slice(1).forEach(line => {
+                const [training, name, sets, reps, weight, notes] = line.split(',').map(item => item.trim());
+                if (training && name) {
+                    exercises.push({
+                        training,
+                        name,
+                        sets,
+                        reps,
+                        weight,
+                        notes
+                    });
+                }
+            });
 
-function exportToFile() {
-    const dataStr = JSON.stringify(exercises, null, 2);
-    const dataBlob = new Blob([dataStr], { type: 'application/json' });
-    const url = URL.createObjectURL(dataBlob);
-    const link = document.createElement('a');
+            localStorage.setItem('exercises', JSON.stringify(exercises));
+            loadExercises();
+        };
 
-    link.href = url;
-    link.download = 'exercises.txt';
-    link.click();
+        reader.readAsText(file);
+    }
 
-    URL.revokeObjectURL(url);
-}
-
-renderTable();
+    // Carrega exercícios ao iniciar a página
+    loadExercises();
+});
 
