@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Exercícios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Escolha o Treino</h2>
+    <div class="button-container">
+        <a href="treino-a.html"><button>Treino A</button></a>
+        <a href="treino-b.html"><button>Treino B</button></a>
+        <a href="treino-c.html"><button>Treino C</button></a>
+        <a href="treino-d.html"><button>Treino D</button></a>
+        <a href="treino-e.html"><button>Treino E</button></a>
+    </div>
+    <br>
+    <a href="add-treino.html"><button>Adicionar Exercícios</button></a>
+
+    <script>
+        // Redireciona para login se não autenticado
+        const storedUser = localStorage.getItem('username');
+        const storedPass = localStorage.getItem('password');
+        if (!storedUser || !storedPass) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
+
