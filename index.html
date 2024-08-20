@@ -12,6 +12,7 @@
             padding: 20px;
             background-color: #f4f4f4;
             text-align: center;
+            display: none; /* Esconde o conteúdo inicialmente */
         }
         h1 {
             margin-bottom: 20px;
@@ -60,6 +61,22 @@
     <div>
         <a href="exercicios.html" class="button">Gerenciar Exercícios</a>
     </div>
+
+    <script>
+        var senhaCorreta = "1977";
+        var senha = "";
+
+        // Continue pedindo a senha até que a correta seja inserida
+        while (senha !== senhaCorreta) {
+            senha = prompt("Por favor, insira a senha:");
+
+            if (senha !== senhaCorreta) {
+                alert("Senha incorreta! Tente novamente.");
+            }
+        }
+
+        // Quando a senha estiver correta, exibe o conteúdo da página
+        document.body.style.display = "block";
+    </script>
 </body>
 </html>
-
