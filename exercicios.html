@@ -199,6 +199,8 @@
                 <td>${exercise.weight}</td>
                 <td>${exercise.notes}</td>
                 <td class="action-buttons">
+                    <button onclick="moveExerciseUp(${index})">▲</button>
+                    <button onclick="moveExerciseDown(${index})">▼</button>
                     <button onclick="editExercise(${index})">Editar</button>
                     <button class="delete" onclick="deleteExercise(${index})">Apagar</button>
                 </td>
@@ -223,6 +225,26 @@
             loadExercises();
         }
 
+        function moveExerciseUp(index) {
+            if (index > 0) {
+                const temp = exercises[index - 1];
+                exercises[index - 1] = exercises[index];
+                exercises[index] = temp;
+                localStorage.setItem('exercises', JSON.stringify(exercises));
+                loadExercises();
+            }
+        }
+
+        function moveExerciseDown(index) {
+            if (index < exercises.length - 1) {
+                const temp = exercises[index + 1];
+                exercises[index + 1] = exercises[index];
+                exercises[index] = temp;
+                localStorage.setItem('exercises', JSON.stringify(exercises));
+                loadExercises();
+            }
+        }
+
         function loadExercises() {
             const table = document.getElementById('exerciseTable').getElementsByTagName('tbody')[0];
             table.innerHTML = '';
@@ -235,29 +257,23 @@
         
         function exportToFile() {
             const blob = new Blob([JSON.stringify(exercises, null, 2)], { type: 'text/plain' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'exercises.txt';
-            a.click();
-            URL.revokeObjectURL(url);
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'exercises.txt';
+            link.click();
         }
 
         function importFromFile() {
-            const file = document.getElementById('importFile').files[0];
-            if (!file) return;
-
+            const fileInput = document.getElementById('importFile');
+            const file = fileInput.files[0];
             const reader = new FileReader();
+
             reader.onload = function (e) {
-                try {
-                    const importedExercises = JSON.parse(e.target.result);
-                    exercises = importedExercises;
-                    localStorage.setItem('exercises', JSON.stringify(exercises));
-                    loadExercises();
-                } catch (error) {
-                    alert('Erro ao importar o arquivo. Verifique o formato do arquivo.');
-                }
+                exercises = JSON.parse(e.target.result);
+                localStorage.setItem('exercises', JSON.stringify(exercises));
+                loadExercises();
             };
+
             reader.readAsText(file);
         }
     </script>
