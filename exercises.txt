@@ -1,10 +1,18 @@
 [
   {
     "training": "A",
+    "name": "Crucifixo",
+    "sets": "4",
+    "reps": "10",
+    "weight": "75",
+    "notes": "Maquina ou Crossover"
+  },
+  {
+    "training": "A",
     "name": "Supino Reto",
     "sets": "4",
     "reps": "10",
-    "weight": "",
+    "weight": "75",
     "notes": "Maquina"
   },
   {
@@ -25,11 +33,11 @@
   },
   {
     "training": "A",
-    "name": "Crucifixo",
+    "name": "Triceps",
     "sets": "4",
     "reps": "10",
-    "weight": "75",
-    "notes": "Maquina ou Crossover"
+    "weight": "",
+    "notes": "Crossover com Corda"
   },
   {
     "training": "A",
@@ -46,14 +54,6 @@
     "reps": "10",
     "weight": "",
     "notes": "Crossover com Barra V"
-  },
-  {
-    "training": "A",
-    "name": "Triceps",
-    "sets": "4",
-    "reps": "10",
-    "weight": "",
-    "notes": "Crossover com Corda"
   },
   {
     "training": "B",
@@ -169,19 +169,19 @@
   },
   {
     "training": "D",
-    "name": "Agachamento Livre",
-    "sets": "4",
-    "reps": "10",
-    "weight": "",
-    "notes": ""
-  },
-  {
-    "training": "D",
     "name": "Leg Press",
     "sets": "4",
     "reps": "10",
     "weight": "240",
     "notes": "Maquina"
+  },
+  {
+    "training": "D",
+    "name": "Agachamento Livre",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "notes": ""
   },
   {
     "training": "D",
