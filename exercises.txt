@@ -12,8 +12,8 @@
     "name": "Supino Reto",
     "sets": "4",
     "reps": "10",
-    "weight": "75",
-    "notes": "Maquina"
+    "weight": "85",
+    "notes": "Maquina ou Crossover"
   },
   {
     "training": "A",
@@ -33,14 +33,6 @@
   },
   {
     "training": "A",
-    "name": "Triceps",
-    "sets": "4",
-    "reps": "10",
-    "weight": "",
-    "notes": "Crossover com Corda"
-  },
-  {
-    "training": "A",
     "name": "Triceps Frances",
     "sets": "4",
     "reps": "10",
@@ -54,6 +46,14 @@
     "reps": "10",
     "weight": "",
     "notes": "Crossover com Barra V"
+  },
+  {
+    "training": "A",
+    "name": "Triceps",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "notes": "Crossover com Corda"
   },
   {
     "training": "B",
@@ -73,19 +73,19 @@
   },
   {
     "training": "B",
-    "name": "Extensão Lombar",
-    "sets": "4",
-    "reps": "15",
-    "weight": "0",
-    "notes": "Banco Romano"
-  },
-  {
-    "training": "B",
     "name": "Stif",
     "sets": "4",
     "reps": "10",
     "weight": "45",
     "notes": ""
+  },
+  {
+    "training": "B",
+    "name": "Extensão Lombar",
+    "sets": "4",
+    "reps": "15",
+    "weight": "",
+    "notes": "Banco Romano"
   },
   {
     "training": "B",
@@ -109,7 +109,7 @@
     "sets": "4",
     "reps": "10",
     "weight": "0",
-    "notes": ""
+    "notes": "Smith ou LegPress"
   },
   {
     "training": "C",
@@ -169,14 +169,6 @@
   },
   {
     "training": "D",
-    "name": "Leg Press",
-    "sets": "4",
-    "reps": "10",
-    "weight": "240",
-    "notes": "Maquina"
-  },
-  {
-    "training": "D",
     "name": "Agachamento Livre",
     "sets": "4",
     "reps": "10",
@@ -185,10 +177,10 @@
   },
   {
     "training": "D",
-    "name": "Agachamento",
+    "name": "Leg Press",
     "sets": "4",
     "reps": "10",
-    "weight": "40",
+    "weight": "240",
     "notes": "Maquina"
   },
   {
@@ -206,6 +198,14 @@
     "reps": "10",
     "weight": "75",
     "notes": "Maquina"
+  },
+  {
+    "training": "D",
+    "name": "Afundo",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "notes": "Livre ou Smith"
   },
   {
     "training": "D",
