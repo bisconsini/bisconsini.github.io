@@ -21,7 +21,7 @@
         form {
             margin-bottom: 20px;
         }
-        input[type="text"], input[type="number"], input[type="file"] {
+        input[type="text"], input[type="number"], input[type="file"], select {
             margin: 5px 0;
             padding: 10px;
             width: 100%;
@@ -54,12 +54,17 @@
         th {
             background-color: #000000;
         }
+        .action-buttons {
+            display: flex;
+            align-items: center;
+            gap: 5px; /* Espaçamento entre os botões */
+        }
         .action-buttons button {
             background-color: #007bff;
             border-radius: 5px;
             padding: 5px 10px;
             font-size: 14px;
-            margin: 0 2px;
+            margin: 0;
         }
         .action-buttons button.delete {
             background-color: #d9534f;
@@ -124,11 +129,22 @@
             <option value="A1">Full Body A</option>
             <option value="B1">Full Body B</option>
         </select>
-        <input type="text" id="exerciseName" placeholder="Nome do exercício" required>
+        <input type="text" id="exerciseName" placeholder="Exercício" required>
         <input type="number" id="sets" placeholder="Séries" required>
         <input type="number" id="reps" placeholder="Repetições" required>
-        <input type="number" id="weight" placeholder="Peso (opcional)">
-        <input type="text" id="notes" placeholder="Observações (opcional)">
+        <input type="number" id="weight" placeholder="Peso">
+        
+        <select id="rest" required>
+            <option value="" disabled selected>Descanso</option>
+            <option value="30 s">30 s</option>
+            <option value="45 s">45 s</option>
+            <option value="60 s">60 s</option>
+            <option value="90 s">90 s</option>
+            <option value="120 s">120 s</option>
+            <option value="180 s">180 s</option>
+        </select>
+
+        <input type="text" id="notes" placeholder="Observações">
         <button type="submit">Adicionar</button>
     </form>
     
@@ -140,6 +156,7 @@
                 <th>Séries</th>
                 <th>Repetições</th>
                 <th>Peso</th>
+                <th>Descanso</th>
                 <th>Observações</th>
                 <th>Ações</th>
             </tr>
@@ -169,6 +186,7 @@
             const sets = document.getElementById('sets').value;
             const reps = document.getElementById('reps').value;
             const weight = document.getElementById('weight').value || '';
+            const rest = document.getElementById('rest').value || '';
             const notes = document.getElementById('notes').value || '';
 
             const exercise = {
@@ -177,13 +195,14 @@
                 sets: sets,
                 reps: reps,
                 weight: weight,
+                rest: rest,
                 notes: notes
             };
 
             exercises.push(exercise);
             localStorage.setItem('exercises', JSON.stringify(exercises));
 
-            addExerciseToTable(exercise, exercises.length - 1);
+            loadExercises();
             form.reset();
         });
 
@@ -197,12 +216,13 @@
                 <td>${exercise.sets}</td>
                 <td>${exercise.reps}</td>
                 <td>${exercise.weight}</td>
+                <td>${exercise.rest}</td> 
                 <td>${exercise.notes}</td>
                 <td class="action-buttons">
-                    <button onclick="moveExerciseUp(${index})">▲</button>
-                    <button onclick="moveExerciseDown(${index})">▼</button>
                     <button onclick="editExercise(${index})">Editar</button>
                     <button class="delete" onclick="deleteExercise(${index})">Apagar</button>
+                    <button onclick="moveExerciseUp(${index})">▲</button>
+                    <button onclick="moveExerciseDown(${index})">▼</button>
                 </td>
             `;
         }
@@ -214,9 +234,13 @@
             document.getElementById('sets').value = exercise.sets;
             document.getElementById('reps').value = exercise.reps;
             document.getElementById('weight').value = exercise.weight;
+            document.getElementById('rest').value = exercise.rest;
             document.getElementById('notes').value = exercise.notes;
 
-            deleteExercise(index);
+            exercises.splice(index, 1);
+            localStorage.setItem('exercises', JSON.stringify(exercises));
+
+            loadExercises();
         }
 
         function deleteExercise(index) {
@@ -246,24 +270,15 @@
         }
 
         function loadExercises() {
-    // Ordenar os exercícios pelo campo 'training'
-    exercises.sort((a, b) => {
-        if (a.training < b.training) return -1;
-        if (a.training > b.training) return 1;
-        return 0;
-    });
+            const tableBody = document.getElementById('exerciseTable').getElementsByTagName('tbody')[0];
+            tableBody.innerHTML = '';
 
-    // Exibir os exercícios na tabela
-    const table = document.getElementById('exerciseTable').getElementsByTagName('tbody')[0];
-    table.innerHTML = '';
-    exercises.forEach((exercise, index) => {
-        addExerciseToTable(exercise, index);
-    });
-}
+            // Ordenar exercícios apenas pelo campo treino
+            exercises.sort((a, b) => a.training.localeCompare(b.training));
 
+            exercises.forEach(addExerciseToTable);
+        }
 
-        document.addEventListener('DOMContentLoaded', loadExercises);
-        
         function exportToFile() {
             const blob = new Blob([JSON.stringify(exercises, null, 2)], { type: 'text/plain' });
             const link = document.createElement('a');
@@ -275,16 +290,20 @@
         function importFromFile() {
             const fileInput = document.getElementById('importFile');
             const file = fileInput.files[0];
-            const reader = new FileReader();
 
-            reader.onload = function (e) {
-                exercises = JSON.parse(e.target.result);
-                localStorage.setItem('exercises', JSON.stringify(exercises));
-                loadExercises();
-            };
-
-            reader.readAsText(file);
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    const importedExercises = JSON.parse(event.target.result);
+                    exercises = exercises.concat(importedExercises);
+                    localStorage.setItem('exercises', JSON.stringify(exercises));
+                    loadExercises();
+                };
+                reader.readAsText(file);
+            }
         }
+
+        loadExercises();
     </script>
 </body>
 </html>

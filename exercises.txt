@@ -5,6 +5,7 @@
     "sets": "4",
     "reps": "10",
     "weight": "75",
+    "rest": "60 s",
     "notes": "Maquina ou Crossover"
   },
   {
@@ -13,14 +14,7 @@
     "sets": "4",
     "reps": "10",
     "weight": "85",
-    "notes": "Maquina ou Crossover"
-  },
-  {
-    "training": "A",
-    "name": "Supino Inclinado",
-    "sets": "4",
-    "reps": "10",
-    "weight": "",
+    "rest": "60 s",
     "notes": "Maquina ou Crossover"
   },
   {
@@ -29,7 +23,26 @@
     "sets": "4",
     "reps": "10",
     "weight": "",
+    "rest": "60 s",
     "notes": "Maquina ou Crossover"
+  },
+  {
+    "training": "A",
+    "name": "Supino Inclinado",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina ou Crossover"
+  },
+  {
+    "training": "A",
+    "name": "Triceps",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Crossover com Corda"
   },
   {
     "training": "A",
@@ -37,6 +50,7 @@
     "sets": "4",
     "reps": "10",
     "weight": "",
+    "rest": "60 s",
     "notes": "Crossover com Barra V"
   },
   {
@@ -45,15 +59,8 @@
     "sets": "4",
     "reps": "10",
     "weight": "",
+    "rest": "60 s",
     "notes": "Crossover com Barra V"
-  },
-  {
-    "training": "A",
-    "name": "Triceps",
-    "sets": "4",
-    "reps": "10",
-    "weight": "",
-    "notes": "Crossover com Corda"
   },
   {
     "training": "B",
@@ -61,14 +68,7 @@
     "sets": "4",
     "reps": "10",
     "weight": "75",
-    "notes": "Maquina"
-  },
-  {
-    "training": "B",
-    "name": "Mesa Flexora",
-    "sets": "4",
-    "reps": "10",
-    "weight": "",
+    "rest": "60 s",
     "notes": "Maquina"
   },
   {
@@ -77,15 +77,8 @@
     "sets": "4",
     "reps": "10",
     "weight": "45",
+    "rest": "60 s",
     "notes": ""
-  },
-  {
-    "training": "B",
-    "name": "Extensão Lombar",
-    "sets": "4",
-    "reps": "15",
-    "weight": "",
-    "notes": "Banco Romano"
   },
   {
     "training": "B",
@@ -93,14 +86,16 @@
     "sets": "4",
     "reps": "10",
     "weight": "",
+    "rest": "60 s",
     "notes": "Maquina"
   },
   {
     "training": "B",
-    "name": "Panturrilha Sentado",
+    "name": "Mesa Flexora",
     "sets": "4",
     "reps": "10",
-    "weight": "20",
+    "weight": "",
+    "rest": "60 s",
     "notes": "Maquina"
   },
   {
@@ -109,7 +104,26 @@
     "sets": "4",
     "reps": "10",
     "weight": "0",
+    "rest": "60 s",
     "notes": "Smith ou LegPress"
+  },
+  {
+    "training": "B",
+    "name": "Panturrilha Sentado",
+    "sets": "4",
+    "reps": "10",
+    "weight": "20",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "B",
+    "name": "Extensão Lombar",
+    "sets": "4",
+    "reps": "15",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Banco Romano"
   },
   {
     "training": "C",
@@ -117,6 +131,7 @@
     "sets": "6",
     "reps": "10",
     "weight": "",
+    "rest": "60 s",
     "notes": "Crossover com Barra Curva"
   },
   {
@@ -125,6 +140,7 @@
     "sets": "4",
     "reps": "10",
     "weight": "60",
+    "rest": "60 s",
     "notes": "Polia com Barra Curva"
   },
   {
@@ -133,6 +149,7 @@
     "sets": "4",
     "reps": "10",
     "weight": "60",
+    "rest": "60 s",
     "notes": "Polia com Triangulo ou Romana"
   },
   {
@@ -141,6 +158,7 @@
     "sets": "4",
     "reps": "10",
     "weight": "80",
+    "rest": "60 s",
     "notes": "Polia com Triangulo"
   },
   {
@@ -149,6 +167,7 @@
     "sets": "4",
     "reps": "10",
     "weight": "45",
+    "rest": "60 s",
     "notes": "Peso livre"
   },
   {
@@ -157,6 +176,7 @@
     "sets": "4",
     "reps": "10",
     "weight": "",
+    "rest": "60 s",
     "notes": "Crossover com Corda"
   },
   {
@@ -165,7 +185,17 @@
     "sets": "4",
     "reps": "10",
     "weight": "25",
+    "rest": "60 s",
     "notes": "Banco Scott com Barra W"
+  },
+  {
+    "training": "C",
+    "name": "Extensão Lombar",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Banco Romano"
   },
   {
     "training": "D",
@@ -173,6 +203,16 @@
     "sets": "4",
     "reps": "10",
     "weight": "",
+    "rest": "120 s",
+    "notes": ""
+  },
+  {
+    "training": "D",
+    "name": "Levantamento Terra",
+    "sets": "4",
+    "reps": "10",
+    "weight": "40",
+    "rest": "120 s",
     "notes": ""
   },
   {
@@ -181,15 +221,8 @@
     "sets": "4",
     "reps": "10",
     "weight": "240",
+    "rest": "60 s",
     "notes": "Maquina"
-  },
-  {
-    "training": "D",
-    "name": "Levantamento Terra",
-    "sets": "4",
-    "reps": "10",
-    "weight": "40",
-    "notes": ""
   },
   {
     "training": "D",
@@ -197,6 +230,7 @@
     "sets": "4",
     "reps": "10",
     "weight": "75",
+    "rest": "60 s",
     "notes": "Maquina"
   },
   {
@@ -205,6 +239,7 @@
     "sets": "4",
     "reps": "10",
     "weight": "",
+    "rest": "120 s",
     "notes": "Livre ou Smith"
   },
   {
@@ -213,6 +248,7 @@
     "sets": "4",
     "reps": "20",
     "weight": "",
+    "rest": "60 s",
     "notes": "Maquina"
   },
   {
@@ -221,31 +257,8 @@
     "sets": "4",
     "reps": "12",
     "weight": "",
+    "rest": "60 s",
     "notes": "Maquina"
-  },
-  {
-    "training": "E",
-    "name": "Elevação Lateral",
-    "sets": "4",
-    "reps": "12",
-    "weight": "",
-    "notes": "Maquina"
-  },
-  {
-    "training": "E",
-    "name": "Crucifixo Inverso",
-    "sets": "4",
-    "reps": "12",
-    "weight": "45",
-    "notes": "Maquina ou Crossover"
-  },
-  {
-    "training": "E",
-    "name": "Elevação Lateral",
-    "sets": "4",
-    "reps": "12",
-    "weight": "",
-    "notes": "Crossover"
   },
   {
     "training": "E",
@@ -253,6 +266,7 @@
     "sets": "4",
     "reps": "12",
     "weight": "",
+    "rest": "60 s",
     "notes": "Sentado no Banco com Halteres"
   },
   {
@@ -261,7 +275,35 @@
     "sets": "4",
     "reps": "12",
     "weight": "",
+    "rest": "60 s",
     "notes": "Crossover ou Halteres"
+  },
+  {
+    "training": "E",
+    "name": "Elevação Lateral",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "E",
+    "name": "Elevação Lateral",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Crossover"
+  },
+  {
+    "training": "E",
+    "name": "Crucifixo Inverso",
+    "sets": "4",
+    "reps": "12",
+    "weight": "45",
+    "rest": "60 s",
+    "notes": "Maquina ou Crossover"
   },
   {
     "training": "E",
@@ -269,6 +311,7 @@
     "sets": "4",
     "reps": "20",
     "weight": "",
+    "rest": "60 s",
     "notes": "Maquina"
   }
 ]

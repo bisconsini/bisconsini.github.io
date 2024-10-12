@@ -1,11 +1,10 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treino Full Body B</title>
     
-    <!-- Ícone para Favoritos e Atalhos -->
     <link rel="icon" href="logo.png" type="image/png">
     <link rel="apple-touch-icon" href="logo.png">
 
@@ -15,12 +14,9 @@
             font-size: 12px;
             font-style: italic;
             padding: 20px;
-            background-color: #000000; /* Fundo preto */
-            color: #FFFFFF; /* Texto branco */
+            background-color: #000000;
+            color: #FFFFFF;
             text-align: center;
-        }
-        h1 {
-            margin-bottom: 20px;
         }
         table {
             width: 100%;
@@ -40,11 +36,11 @@
             text-decoration: none;
             padding: 5px 10px;
             background-color: #007bff;
-            color: white; /* Texto branco nos botões */
+            color: white;
             border-radius: 5px;
             margin: 5px;
             font-size: 14px;
-            font-weight: bold; /* Texto em negrito */
+            font-weight: bold;
             text-align: center;
         }
         .button-escuro {
@@ -52,11 +48,11 @@
             text-decoration: none;
             padding: 5px 10px;
             background-color: #008000;
-            color: white; /* Texto branco nos botões */
+            color: white;
             border-radius: 5px;
             margin: 5px;
             font-size: 14px;
-            font-weight: bold; /* Texto em negrito */
+            font-weight: bold;
             text-align: center;
         }
         .button-claro {
@@ -64,11 +60,11 @@
             text-decoration: none;
             padding: 5px 10px;
             background-color: #00FF00;
-            color: white; /* Texto branco nos botões */
+            color: white;
             border-radius: 5px;
             margin: 5px;
             font-size: 14px;
-            font-weight: bold; /* Texto em negrito */
+            font-weight: bold;
             text-align: center;
         }
         </style>
@@ -87,8 +83,7 @@
         <a href="fullbody_a.html" class="button-escuro">Full Body A</a>
         <a href="fullbody_b.html" class="button-claro">Full Body B</a>
     </div>
-    <h2></h2>
-    
+    <br>
     <table id="exerciseTable">
         <thead>
             <tr>
@@ -96,6 +91,7 @@
                 <th>Séries</th>
                 <th>Repetições</th>
                 <th>Peso</th>
+                <th>Descanso</th>
                 <th>Observações</th>
             </tr>
         </thead>
@@ -103,7 +99,6 @@
     </table>
 
     <a href="index.html" class="button-azul">Voltar</a>
-    </div>
 
     <script>
         const table = document.getElementById('exerciseTable').getElementsByTagName('tbody')[0];
@@ -118,6 +113,7 @@
                     <td>${exercise.sets}</td>
                     <td>${exercise.reps}</td>
                     <td>${exercise.weight}</td>
+                    <td>${exercise.rest}</td>
                     <td>${exercise.notes}</td>
                 `;
             });
