@@ -246,12 +246,21 @@
         }
 
         function loadExercises() {
-            const table = document.getElementById('exerciseTable').getElementsByTagName('tbody')[0];
-            table.innerHTML = '';
-            exercises.forEach((exercise, index) => {
-                addExerciseToTable(exercise, index);
-            });
-        }
+    // Ordenar os exercícios pelo campo 'training'
+    exercises.sort((a, b) => {
+        if (a.training < b.training) return -1;
+        if (a.training > b.training) return 1;
+        return 0;
+    });
+
+    // Exibir os exercícios na tabela
+    const table = document.getElementById('exerciseTable').getElementsByTagName('tbody')[0];
+    table.innerHTML = '';
+    exercises.forEach((exercise, index) => {
+        addExerciseToTable(exercise, index);
+    });
+}
+
 
         document.addEventListener('DOMContentLoaded', loadExercises);
         
