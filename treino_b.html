@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -8,17 +8,18 @@
     <!-- Ícone para Favoritos e Atalhos -->
     <link rel="icon" href="logo.png" type="image/png">
     <link rel="apple-touch-icon" href="logo.png">
-    
+
     <style>
-        body {
+    	body {
             font-family: Arial, sans-serif;
             font-size: 12px;
             font-style: italic;
             padding: 20px;
             background-color: #000000; /* Fundo preto */
             color: #FFFFFF; /* Texto branco */
+            text-align: center;
         }
-        h2 {
+        h1 {
             margin-bottom: 20px;
         }
         table {
@@ -34,30 +35,59 @@
         th {
             background-color: #000000;
         }
-        .button-group {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .button-group a {
+        .button-azul {
+            display: inline-block;
             text-decoration: none;
-            color: white; /* Texto branco nos botões */
-            background-color: #007bff;
             padding: 5px 10px;
+            background-color: #007bff;
+            color: white; /* Texto branco nos botões */
             border-radius: 5px;
+            margin: 5px;
             font-size: 14px;
             font-weight: bold; /* Texto em negrito */
-            margin: 5px;
             text-align: center;
+        }
+        .button-escuro {
             display: inline-block;
+            text-decoration: none;
+            padding: 5px 10px;
+            background-color: #008000;
+            color: white; /* Texto branco nos botões */
+            border-radius: 5px;
+            margin: 5px;
+            font-size: 14px;
+            font-weight: bold; /* Texto em negrito */
+            text-align: center;
         }
-        .button-group a:hover {
-            background-color: #0056b3;
+        .button-claro {
+            display: inline-block;
+            text-decoration: none;
+            padding: 5px 10px;
+            background-color: #00FF00;
+            color: white; /* Texto branco nos botões */
+            border-radius: 5px;
+            margin: 5px;
+            font-size: 14px;
+            font-weight: bold; /* Texto em negrito */
+            text-align: center;
         }
-    </style>
+        </style>
 </head>
 <body>
-    <h2>Treino B</h2>
+	<div>
+        <a href="treino_a.html" class="button-escuro">A</a>
+        <a href="treino_b.html" class="button-claro">B</a>
+        <a href="treino_c.html" class="button-escuro">C</a>
+        <a href="treino_d.html" class="button-escuro">D</a>
+        <a href="treino_e.html" class="button-escuro">E</a>
+        <a href="treino_f.html" class="button-escuro">F</a>
+        <a href="treino_g.html" class="button-escuro">G</a>
+    </div>
+    <div>
+        <a href="fullbody_a.html" class="button-escuro">Full Body A</a>
+        <a href="fullbody_b.html" class="button-escuro">Full Body B</a>
+    </div>
+    <h2></h2>
     
     <table id="exerciseTable">
         <thead>
@@ -72,8 +102,7 @@
         <tbody></tbody>
     </table>
 
-    <div class="button-group">
-        <a href="index.html">Voltar</a>
+    <a href="index.html" class="button-azul">Voltar</a>
     </div>
 
     <script>
@@ -82,7 +111,7 @@
 
         function loadExercises() {
             table.innerHTML = '';
-            exercises.filter(exercise => exercise.training === 'B').forEach(exercise => {
+            exercises.filter(exercise => exercise.training === 'A').forEach(exercise => {
                 const newRow = table.insertRow();
                 newRow.innerHTML = `
                     <td>${exercise.name}</td>
