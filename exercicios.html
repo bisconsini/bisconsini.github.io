@@ -126,8 +126,8 @@
             <option value="E">E</option>
             <option value="F">F</option>
             <option value="G">G</option>
-            <option value="A1">Full Body A</option>
-            <option value="B1">Full Body B</option>
+            <option value="H">Full Body A</option>
+            <option value="I">Full Body B</option>
         </select>
         <input type="text" id="exerciseName" placeholder="Exercíse" required>
         <input type="number" id="sets" placeholder="Sets" required>
@@ -210,7 +210,7 @@
             const table = document.getElementById('exerciseTable').getElementsByTagName('tbody')[0];
             const newRow = table.insertRow();
 
-            newRow.innerHTML = 
+            newRow.innerHTML = `
                 <td>${exercise.training}</td>
                 <td>${exercise.name}</td>
                 <td>${exercise.sets}</td>
@@ -224,7 +224,7 @@
                     <button onclick="moveExerciseUp(${index})">▲</button>
                     <button onclick="moveExerciseDown(${index})">▼</button>
                 </td>
-            ;
+            `;
         }
 
         function editExercise(index) {
@@ -307,3 +307,4 @@
     </script>
 </body>
 </html>
+
