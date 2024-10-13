@@ -63,6 +63,87 @@
     "notes": "Crossover com Barra V"
   },
   {
+    "training": "A1",
+    "name": "Supino",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "A1",
+    "name": "Puxada Alta",
+    "sets": "4",
+    "reps": "12",
+    "weight": "60",
+    "rest": "60 s",
+    "notes": "Polia com Barra Curva"
+  },
+  {
+    "training": "A1",
+    "name": "Agachamento Livre",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "120 s",
+    "notes": ""
+  },
+  {
+    "training": "A1",
+    "name": "Cadeira Extensora",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "A1",
+    "name": "Triceps Testa",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Crossover com Corda"
+  },
+  {
+    "training": "A1",
+    "name": "Rosca 45",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Halter no Banco"
+  },
+  {
+    "training": "A1",
+    "name": "Elevação Lateral",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "A1",
+    "name": "Desenvolvimento",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "A1",
+    "name": "Abdominal",
+    "sets": "4",
+    "reps": "20",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
     "training": "B",
     "name": "Cadeira Flexora",
     "sets": "4",
@@ -121,6 +202,87 @@
     "name": "Extensão Lombar",
     "sets": "4",
     "reps": "15",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Banco Romano"
+  },
+  {
+    "training": "B1",
+    "name": "Crucifixo",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "B1",
+    "name": "Stif",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "120 s",
+    "notes": ""
+  },
+  {
+    "training": "B1",
+    "name": "Cadeira Flexora",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "B1",
+    "name": "Remada Baixa",
+    "sets": "4",
+    "reps": "12",
+    "weight": "80",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "B1",
+    "name": "Triceps Frances",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Crossover com Corda"
+  },
+  {
+    "training": "B1",
+    "name": "Rosca Spider",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Barra W no Banco"
+  },
+  {
+    "training": "B1",
+    "name": "Elevação Lateral",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Halter Sentado"
+  },
+  {
+    "training": "B1",
+    "name": "Desenvolvimento",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Halter Sentado"
+  },
+  {
+    "training": "B1",
+    "name": "Extensão Lombar",
+    "sets": "4",
+    "reps": "10",
     "weight": "",
     "rest": "60 s",
     "notes": "Banco Romano"
