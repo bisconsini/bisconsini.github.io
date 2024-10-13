@@ -129,7 +129,7 @@
             <option value="A1">Full Body A</option>
             <option value="B1">Full Body B</option>
         </select>
-        <input type="text" id="exerciseName" placeholder="Exercício" required>
+        <input type="text" id="exerciseName" placeholder="Exercíse" required>
         <input type="number" id="sets" placeholder="Sets" required>
         <input type="number" id="reps" placeholder="Reps" required>
         <input type="number" id="weight" placeholder="Weight">
@@ -175,64 +175,8 @@
     </div>
 
     <script>
-        const GITHUB_TOKEN = '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';
-        const USERNAME = 'bisconsini';
-        const REPO = 'bisconsini.github.io';
-        const FILE_PATH = 'exercises.txt';
-        const BRANCH = 'main';
-
         const form = document.getElementById('exerciseForm');
-        let exercises = [];
-
-        async function fetchExercisesFromGitHub() {
-            const response = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`, {
-                headers: {
-                    Authorization: `token ${GITHUB_TOKEN}`
-                }
-            });
-
-            if (response.ok) {
-                const fileData = await response.json();
-                const content = atob(fileData.content);
-                exercises = JSON.parse(content);
-                loadExercises();
-            } else {
-                console.error('Erro ao carregar o arquivo do GitHub');
-            }
-        }
-
-        async function saveExercisesToGitHub() {
-            const response = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${FILE_PATH}?ref=${BRANCH}`, {
-                headers: {
-                    Authorization: `token ${GITHUB_TOKEN}`
-                }
-            });
-
-            const fileData = await response.json();
-            const sha = fileData.sha;
-
-            const content = btoa(JSON.stringify(exercises, null, 2));
-
-            const saveResponse = await fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${FILE_PATH}`, {
-                method: 'PUT',
-                headers: {
-                    Authorization: `token ${GITHUB_TOKEN}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    message: 'Atualizando exercícios',
-                    content: content,
-                    sha: sha,
-                    branch: BRANCH
-                })
-            });
-
-            if (saveResponse.ok) {
-                alert('Exercícios salvos no GitHub com sucesso!');
-            } else {
-                console.error('Erro ao salvar o arquivo no GitHub');
-            }
-        }
+        let exercises = JSON.parse(localStorage.getItem('exercises')) || [];
 
         form.addEventListener('submit', function (e) {
             e.preventDefault();
@@ -256,39 +200,91 @@
             };
 
             exercises.push(exercise);
-            saveExercisesToGitHub();
+            localStorage.setItem('exercises', JSON.stringify(exercises));
+
             loadExercises();
             form.reset();
         });
+
+        function addExerciseToTable(exercise, index) {
+            const table = document.getElementById('exerciseTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+
+            newRow.innerHTML = 
+                <td>${exercise.training}</td>
+                <td>${exercise.name}</td>
+                <td>${exercise.sets}</td>
+                <td>${exercise.reps}</td>
+                <td>${exercise.weight}</td>
+                <td>${exercise.rest}</td> 
+                <td>${exercise.notes}</td>
+                <td class="action-buttons">
+                    <button onclick="editExercise(${index})">Edit</button>
+                    <button class="delete" onclick="deleteExercise(${index})">Delete</button>
+                    <button onclick="moveExerciseUp(${index})">▲</button>
+                    <button onclick="moveExerciseDown(${index})">▼</button>
+                </td>
+            ;
+        }
+
+        function editExercise(index) {
+            const exercise = exercises[index];
+            document.getElementById('training').value = exercise.training;
+            document.getElementById('exerciseName').value = exercise.name;
+            document.getElementById('sets').value = exercise.sets;
+            document.getElementById('reps').value = exercise.reps;
+            document.getElementById('weight').value = exercise.weight;
+            document.getElementById('rest').value = exercise.rest;
+            document.getElementById('notes').value = exercise.notes;
+
+            exercises.splice(index, 1);
+            localStorage.setItem('exercises', JSON.stringify(exercises));
+
+            loadExercises();
+        }
+
+        function deleteExercise(index) {
+            exercises.splice(index, 1);
+            localStorage.setItem('exercises', JSON.stringify(exercises));
+            loadExercises();
+        }
+
+        function moveExerciseUp(index) {
+            if (index > 0) {
+                const temp = exercises[index - 1];
+                exercises[index - 1] = exercises[index];
+                exercises[index] = temp;
+                localStorage.setItem('exercises', JSON.stringify(exercises));
+                loadExercises();
+            }
+        }
+
+        function moveExerciseDown(index) {
+            if (index < exercises.length - 1) {
+                const temp = exercises[index + 1];
+                exercises[index + 1] = exercises[index];
+                exercises[index] = temp;
+                localStorage.setItem('exercises', JSON.stringify(exercises));
+                loadExercises();
+            }
+        }
 
         function loadExercises() {
             const tableBody = document.getElementById('exerciseTable').getElementsByTagName('tbody')[0];
             tableBody.innerHTML = '';
 
-            exercises.forEach((exercise, index) => {
-                const row = document.createElement('tr');
+            // Ordenar exercícios apenas pelo campo treino
+            exercises.sort((a, b) => a.training.localeCompare(b.training));
 
-                row.innerHTML = `
-                    <td>${exercise.training}</td>
-                    <td>${exercise.name}</td>
-                    <td>${exercise.sets}</td>
-                    <td>${exercise.reps}</td>
-                    <td>${exercise.weight}</td>
-                    <td>${exercise.rest}</td>
-                    <td>${exercise.notes}</td>
-                    <td class="action-buttons">
-                        <button onclick="deleteExercise(${index})" class="delete">Delete</button>
-                    </td>
-                `;
-
-                tableBody.appendChild(row);
-            });
+            exercises.forEach(addExerciseToTable);
         }
 
-        function deleteExercise(index) {
-            exercises.splice(index, 1);
-            saveExercisesToGitHub();
-            loadExercises();
+        function exportToFile() {
+            const blob = new Blob([JSON.stringify(exercises, null, 2)], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'exercises.txt';
+            link.click();
         }
 
         function importFromFile() {
@@ -297,20 +293,17 @@
 
             if (file) {
                 const reader = new FileReader();
-                reader.onload = function (e) {
-                    exercises = JSON.parse(e.target.result);
-                    saveExercisesToGitHub();
+                reader.onload = function (event) {
+                    const importedExercises = JSON.parse(event.target.result);
+                    exercises = exercises.concat(importedExercises);
+                    localStorage.setItem('exercises', JSON.stringify(exercises));
                     loadExercises();
                 };
                 reader.readAsText(file);
             }
         }
 
-        function exportToFile() {
-            saveExercisesToGitHub();
-        }
-
-        window.onload = fetchExercisesFromGitHub;
+        loadExercises();
     </script>
 </body>
 </html>
