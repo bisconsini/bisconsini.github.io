@@ -103,7 +103,7 @@
     "name": "Panturrilha de Pé",
     "sets": "4",
     "reps": "10",
-    "weight": "0",
+    "weight": "",
     "rest": "60 s",
     "notes": "Smith ou LegPress"
   },
