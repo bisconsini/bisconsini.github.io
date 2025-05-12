@@ -1,0 +1,209 @@
+[
+  {
+    "training": "A",
+    "name": "Supino Reto",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "A",
+    "name": "Supino Inclinado",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Banco 30 graus com peso livre"
+  },
+  {
+    "training": "A",
+    "name": "Crucifixo",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "A",
+    "name": "Elevação Frontal",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Peso livre"
+  },
+  {
+    "training": "A",
+    "name": "Elevação Lateral",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Peso livre, sentado"
+  },
+  {
+    "training": "A",
+    "name": "Elevação Lateral",
+    "sets": "5",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "A",
+    "name": "Triceps Testa",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Crossover com corda"
+  },
+  {
+    "training": "A",
+    "name": "Triceps",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Crossover com corda"
+  },
+  {
+    "training": "B",
+    "name": "Agachamento Livre",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "90 s",
+    "notes": "Peso livre"
+  },
+  {
+    "training": "B",
+    "name": "Leg Press",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "90 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "B",
+    "name": "Cadeira Extensora",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "B",
+    "name": "Mesa Flexora",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "B",
+    "name": "Cadeira Flexora",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "B",
+    "name": "Stiff",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Peso livre"
+  },
+  {
+    "training": "B",
+    "name": "Panturrilha Sentado",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "B",
+    "name": "Panturrilha em Pé",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "C",
+    "name": "Pulley Frente",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "C",
+    "name": "Remada Baixa",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "C",
+    "name": "Pull Down",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Crossover com barra curva"
+  },
+  {
+    "training": "C",
+    "name": "Remada Aberta",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "C",
+    "name": "Crucifixo Inverso",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "C",
+    "name": "Roca Direta",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Peso livre"
+  },
+  {
+    "training": "C",
+    "name": "Rosca 45",
+    "sets": "3",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Peso livre no banco"
+  }
+]

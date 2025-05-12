@@ -1,0 +1,318 @@
+[
+  {
+    "training": "A",
+    "name": "Crucifixo",
+    "sets": "4",
+    "reps": "10",
+    "weight": "75",
+    "rest": "60 s",
+    "notes": "Maquina ou Crossover"
+  },
+  {
+    "training": "A",
+    "name": "Supino Reto",
+    "sets": "4",
+    "reps": "10",
+    "weight": "85",
+    "rest": "60 s",
+    "notes": "Maquina ou Crossover"
+  },
+  {
+    "training": "A",
+    "name": "Supino Declinado",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina ou Crossover"
+  },
+  {
+    "training": "A",
+    "name": "Supino Inclinado",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina ou Crossover"
+  },
+  {
+    "training": "A",
+    "name": "Triceps",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Crossover com Corda"
+  },
+  {
+    "training": "A",
+    "name": "Triceps Frances",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Crossover com Barra V"
+  },
+  {
+    "training": "A",
+    "name": "Triceps Testa",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Crossover com Barra V"
+  },
+  {
+    "training": "B",
+    "name": "Cadeira Flexora",
+    "sets": "4",
+    "reps": "10",
+    "weight": "75",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "B",
+    "name": "Stif",
+    "sets": "4",
+    "reps": "10",
+    "weight": "45",
+    "rest": "60 s",
+    "notes": ""
+  },
+  {
+    "training": "B",
+    "name": "Elevação Pélvica",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "B",
+    "name": "Mesa Flexora",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "B",
+    "name": "Panturrilha de Pé",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Smith ou LegPress"
+  },
+  {
+    "training": "B",
+    "name": "Panturrilha Sentado",
+    "sets": "4",
+    "reps": "10",
+    "weight": "20",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "B",
+    "name": "Extensão Lombar",
+    "sets": "4",
+    "reps": "15",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Banco Romano"
+  },
+  {
+    "training": "C",
+    "name": "Pulldown",
+    "sets": "6",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Crossover com Barra Curva"
+  },
+  {
+    "training": "C",
+    "name": "Puxada Alta",
+    "sets": "4",
+    "reps": "10",
+    "weight": "60",
+    "rest": "60 s",
+    "notes": "Polia com Barra Curva"
+  },
+  {
+    "training": "C",
+    "name": "Puxada Alta",
+    "sets": "4",
+    "reps": "10",
+    "weight": "60",
+    "rest": "60 s",
+    "notes": "Polia com Triangulo ou Romana"
+  },
+  {
+    "training": "C",
+    "name": "Remada Baixa",
+    "sets": "4",
+    "reps": "10",
+    "weight": "80",
+    "rest": "60 s",
+    "notes": "Polia com Triangulo"
+  },
+  {
+    "training": "C",
+    "name": "Remada Baixa",
+    "sets": "4",
+    "reps": "10",
+    "weight": "45",
+    "rest": "60 s",
+    "notes": "Peso livre"
+  },
+  {
+    "training": "C",
+    "name": "Rosca",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Crossover com Corda"
+  },
+  {
+    "training": "C",
+    "name": "Rosca Scott",
+    "sets": "4",
+    "reps": "10",
+    "weight": "25",
+    "rest": "60 s",
+    "notes": "Banco Scott com Barra W"
+  },
+  {
+    "training": "C",
+    "name": "Extensão Lombar",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Banco Romano"
+  },
+  {
+    "training": "D",
+    "name": "Agachamento Livre",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "120 s",
+    "notes": ""
+  },
+  {
+    "training": "D",
+    "name": "Levantamento Terra",
+    "sets": "4",
+    "reps": "10",
+    "weight": "40",
+    "rest": "120 s",
+    "notes": ""
+  },
+  {
+    "training": "D",
+    "name": "Leg Press",
+    "sets": "4",
+    "reps": "10",
+    "weight": "240",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "D",
+    "name": "Cadeira Extensora",
+    "sets": "4",
+    "reps": "10",
+    "weight": "75",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "D",
+    "name": "Afundo",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "120 s",
+    "notes": "Livre ou Smith"
+  },
+  {
+    "training": "D",
+    "name": "Abdominal",
+    "sets": "4",
+    "reps": "20",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "E",
+    "name": "Desenvolvimento",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "E",
+    "name": "Desenvolvimento",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Sentado no Banco com Halteres"
+  },
+  {
+    "training": "E",
+    "name": "Elevação Frontal",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Crossover ou Halteres"
+  },
+  {
+    "training": "E",
+    "name": "Elevação Lateral",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  },
+  {
+    "training": "E",
+    "name": "Elevação Lateral",
+    "sets": "4",
+    "reps": "12",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Crossover"
+  },
+  {
+    "training": "E",
+    "name": "Crucifixo Inverso",
+    "sets": "4",
+    "reps": "12",
+    "weight": "45",
+    "rest": "60 s",
+    "notes": "Maquina ou Crossover"
+  },
+  {
+    "training": "E",
+    "name": "Abdominal",
+    "sets": "4",
+    "reps": "20",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Maquina"
+  }
+]
+ 

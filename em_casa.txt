@@ -1,0 +1,263 @@
+[
+  {
+    "training": "A",
+    "name": "Supino",
+    "sets": "4",
+    "reps": "1",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Banco 30 graus com halteres"
+  },
+  {
+    "training": "A",
+    "name": "Supino",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Banco reto com halteres"
+  },
+  {
+    "training": "A",
+    "name": "Crucifixo",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Banco 30 graus com halteres"
+  },
+  {
+    "training": "A",
+    "name": "Flexao de braços",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": ""
+  },
+  {
+    "training": "A",
+    "name": "Triceps testa",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Banco 30 graus, barra w, pronada"
+  },
+  {
+    "training": "A",
+    "name": "Triceps coice",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Halter unilateral"
+  },
+  {
+    "training": "A",
+    "name": "Prancha escalador",
+    "sets": "4",
+    "reps": "20",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "No solo"
+  },
+  {
+    "training": "B",
+    "name": "Barra fixa",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Aberta, pronada"
+  },
+  {
+    "training": "B",
+    "name": "Barra fixa",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Fechada, neutra"
+  },
+  {
+    "training": "B",
+    "name": "Remada curvada",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Barra reta, pronada"
+  },
+  {
+    "training": "B",
+    "name": "Remada serrote",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Com halteres"
+  },
+  {
+    "training": "B",
+    "name": "Rosca 45",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Banco 45 graus com halteres"
+  },
+  {
+    "training": "B",
+    "name": "Rosca",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Em pé, Barra w"
+  },
+  {
+    "training": "B",
+    "name": "Abdominal ",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Bicicleta"
+  },
+  {
+    "training": "C",
+    "name": "Agachamento",
+    "sets": "4",
+    "reps": "15",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Com salto"
+  },
+  {
+    "training": "C",
+    "name": "Agachamento",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Com halteres"
+  },
+  {
+    "training": "C",
+    "name": "Agachamento",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Sumo com barra"
+  },
+  {
+    "training": "C",
+    "name": "Afundo",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Com halteres"
+  },
+  {
+    "training": "C",
+    "name": "Stiff",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Barra reta"
+  },
+  {
+    "training": "C",
+    "name": "Flexao de joelhos",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Em pé com caneleira"
+  },
+  {
+    "training": "C",
+    "name": "Flexao de joelhos",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Deitado com caneleira"
+  },
+  {
+    "training": "C",
+    "name": "Panturrilha",
+    "sets": "4",
+    "reps": "15",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "De pé no step"
+  },
+  {
+    "training": "D",
+    "name": "Elevação lateral",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Sentado com halteres"
+  },
+  {
+    "training": "D",
+    "name": "Desenvolvimento",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Sentado com halteres"
+  },
+  {
+    "training": "D",
+    "name": "Elevação frontal",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "De pé com halteres"
+  },
+  {
+    "training": "D",
+    "name": "Remada alta",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Pronada, de pé com barra w"
+  },
+  {
+    "training": "D",
+    "name": "Crucifixo inverso",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Baco  30 graus com halteres"
+  },
+  {
+    "training": "D",
+    "name": "Encolhimento",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Com halteres pegada neutra"
+  },
+  {
+    "training": "D",
+    "name": "Abdominal borboleta",
+    "sets": "4",
+    "reps": "10",
+    "weight": "",
+    "rest": "60 s",
+    "notes": "Deitado no solo"
+  }
+]

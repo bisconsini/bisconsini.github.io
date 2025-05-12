@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" href="logo.png">
 
     <style>
-    	body {
+        body {
             font-family: Arial, sans-serif;
             font-size: 12px;
             font-style: italic;
@@ -26,57 +26,43 @@
         th, td {
             padding: 10px;
             border: 1px solid #ddd;
-            text-align: left;
+            vertical-align: middle;
+        }
+        th:first-child, td:first-child {
+            width: 30px;
+            text-align: center;
         }
         th {
             background-color: #000000;
+            text-align: center; /* títulos centralizados */
         }
-        .button-azul {
+        td:not(:first-child) {
+            text-align: left;
+        }
+        .button-azul, .button-escuro, .button-claro {
             display: inline-block;
             text-decoration: none;
             padding: 5px 10px;
-            background-color: #007bff;
-            color: white;
             border-radius: 5px;
             margin: 5px;
             font-size: 14px;
             font-weight: bold;
             text-align: center;
-        }
-        .button-escuro {
-            display: inline-block;
-            text-decoration: none;
-            padding: 5px 10px;
-            background-color: #008000;
             color: white;
-            border-radius: 5px;
-            margin: 5px;
-            font-size: 14px;
-            font-weight: bold;
-            text-align: center;
         }
-        .button-claro {
-            display: inline-block;
-            text-decoration: none;
-            padding: 5px 10px;
-            background-color: #00FF00;
-            color: white;
-            border-radius: 5px;
-            margin: 5px;
-            font-size: 14px;
-            font-weight: bold;
-            text-align: center;
-        }
-        </style>
+        .button-azul { background-color: #007bff; }
+        .button-escuro { background-color: #008000; }
+        .button-claro { background-color: #00FF00; }
+    </style>
 </head>
 <body>
-	<div>
-        <a href="treino_a.html" class="button-escuro">A</a>
+    <div>
+        <a href="treino_a.html" class="button-claro">A</a>
         <a href="treino_b.html" class="button-escuro">B</a>
         <a href="treino_c.html" class="button-escuro">C</a>
         <a href="treino_d.html" class="button-escuro">D</a>
         <a href="treino_e.html" class="button-escuro">E</a>
-        <a href="treino_f.html" class="button-claro">F</a>
+        <a href="treino_f.html" class="button-escuro">F</a>
         <a href="treino_g.html" class="button-escuro">G</a>
     </div>
     <div>
@@ -87,18 +73,19 @@
     <table id="exerciseTable">
         <thead>
             <tr>
-                <th>Exercise</th>
-                <th>Sets</th>
-                <th>Reps</th>
-                <th>Weight</th>
-                <th>Rest</th>
-                <th>Notes</th>
+                <th></th>
+		<th>Exercícios</th>
+                <th>Séries</th>
+                <th>Repetições</th>
+                <th>Carga</th>
+                <th>Descanso</th>
+                <th>Observações</th>
             </tr>
         </thead>
         <tbody></tbody>
     </table>
 
-    <a href="index.html" class="button-azul">Back</a>
+    <a href="index.html" class="button-azul">Voltar</a>
 
     <script>
         const table = document.getElementById('exerciseTable').getElementsByTagName('tbody')[0];
@@ -106,17 +93,20 @@
 
         function loadExercises() {
             table.innerHTML = '';
-            exercises.filter(exercise => exercise.training === 'F').forEach(exercise => {
-                const newRow = table.insertRow();
-                newRow.innerHTML = `
-                    <td>${exercise.name}</td>
-                    <td>${exercise.sets}</td>
-                    <td>${exercise.reps}</td>
-                    <td>${exercise.weight}</td>
-                    <td>${exercise.rest}</td>
-                    <td>${exercise.notes}</td>
-                `;
-            });
+            exercises
+                .filter(exercise => exercise.training === 'F')
+                .forEach((exercise) => {
+                    const newRow = table.insertRow();
+                    newRow.innerHTML = `
+                        <td><input type="checkbox"></td>
+                        <td>${exercise.name}</td>
+                        <td>${exercise.sets}</td>
+                        <td>${exercise.reps}</td>
+                        <td>${exercise.weight}</td>
+                        <td>${exercise.rest}</td>
+                        <td>${exercise.notes}</td>
+                    `;
+                });
         }
 
         loadExercises();

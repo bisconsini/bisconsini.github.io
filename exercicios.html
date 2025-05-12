@@ -118,7 +118,7 @@
     <h2>Adicionar e Gerenciar Exercícios</h2>
     <form id="exerciseForm">
         <select id="training" required>
-            <option value="" disabled selected>Training</option>
+            <option value="" disabled selected>Treino</option>
             <option value="A">A</option>
             <option value="B">B</option>
             <option value="C">C</option>
@@ -129,13 +129,13 @@
             <option value="H">Full Body A</option>
             <option value="I">Full Body B</option>
         </select>
-        <input type="text" id="exerciseName" placeholder="Exercíse" required>
-        <input type="number" id="sets" placeholder="Sets" required>
-        <input type="number" id="reps" placeholder="Reps" required>
-        <input type="number" id="weight" placeholder="Weight">
+        <input type="text" id="exerciseName" placeholder="Exercício" required>
+        <input type="number" id="sets" placeholder="Séries" required>
+        <input type="number" id="reps" placeholder="Reppetições" required>
+        <input type="number" id="weight" placeholder="Carga">
         
         <select id="rest" required>
-            <option value="" disabled selected>Rest</option>
+            <option value="" disabled selected>Descanso</option>
             <option value="30 s">30 s</option>
             <option value="45 s">45 s</option>
             <option value="60 s">60 s</option>
@@ -144,21 +144,21 @@
             <option value="180 s">180 s</option>
         </select>
 
-        <input type="text" id="notes" placeholder="Notes">
-        <button type="submit">Submit</button>
+        <input type="text" id="notes" placeholder="Observações">
+        <button type="submit">Adicionar</button>
     </form>
     
     <table id="exerciseTable">
         <thead>
             <tr>
-                <th>Training</th>
-                <th>Exercise</th>
-                <th>Sets</th>
-                <th>Reps</th>
-                <th>Weight</th>
-                <th>Rest</th>
-                <th>Notes</th>
-                <th>Actions</th>
+                <th>Treino</th>
+		<th>Exercícios</th>
+                <th>Séries</th>
+                <th>Repetições</th>
+                <th>Carga</th>
+                <th>Descanso</th>
+                <th>Observações</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody></tbody>
@@ -166,12 +166,12 @@
 
     <div class="export-import-buttons">
         <input type="file" id="importFile" accept=".txt">
-        <button onclick="importFromFile()">Import</button>
-        <button onclick="exportToFile()">Export</button>
+        <button onclick="importFromFile()">Importar</button>
+        <button onclick="exportToFile()">Exportar</button>
     </div>
 
     <div class="back-button">
-        <a href="index.html">Back</a>
+        <a href="index.html">Voltar</a>
     </div>
 
     <script>
@@ -219,8 +219,8 @@
                 <td>${exercise.rest}</td> 
                 <td>${exercise.notes}</td>
                 <td class="action-buttons">
-                    <button onclick="editExercise(${index})">Edit</button>
-                    <button class="delete" onclick="deleteExercise(${index})">Delete</button>
+                    <button onclick="editExercise(${index})">Editar</button>
+                    <button class="delete" onclick="deleteExercise(${index})">Apagar</button>
                     <button onclick="moveExerciseUp(${index})">▲</button>
                     <button onclick="moveExerciseDown(${index})">▼</button>
                 </td>
